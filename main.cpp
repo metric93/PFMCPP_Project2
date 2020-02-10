@@ -9,20 +9,18 @@ video: Chapter 2 - Part 3
  Declarations Tasks
 
  Create a branch named Part1
+ -> Done
  
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t)
  put them here: 
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ char
+ int
+ float
+ bool
+ double
+ void
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration function.
     give each declaration an initial value
@@ -56,10 +54,28 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
+
+    //primitiveType declarations:
+    char letter = 'a';
+    char range = 'c';
+    char selection ='g';
+
+    int counter = 1;
+    int stepSize = 5551;
+    int largeNumber = 1000000000;
+
+    bool deviceState = false; 
+    bool interior = 0; // true equals 1, false equals 0
+    bool passby = true; 
+
     
-    
-    
+
+    //ignoreUnused variables:
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+
+    ignoreUnused(letter, range, selection); //char
+    ignoreUnused(counter, stepSize, largeNumber); //int
+    ignoreUnused(deviceState, interior, passby); //bool
 }
 /*
  10 functions
