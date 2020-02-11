@@ -15,12 +15,12 @@ video: Chapter 2 - Part 3
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t)
  put them here: 
  
- char
- int
- float
- bool
- double
- void
+ char       -> single character  = 1 byte
+ int        -> integer = 4 bytes
+ float      -> floating point value = 4 bytes
+ bool       -> true or false. (true/false can be either written out or the numbers 1 and 0) = 1 byte
+ double     -> more accurate floating point value = 8 bytes
+ void       -> no value 
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration function.
     give each declaration an initial value
@@ -64,9 +64,18 @@ void variableDeclarations()
     int stepSize = 5551;
     int largeNumber = 1000000000;
 
+    float walkingSpeed = 15.235f;
+    float acceleration = 5.f;
+    float weight = 125.5f;
+
     bool deviceState = false; 
     bool interior = 0; // true equals 1, false equals 0
     bool passby = true; 
+
+    double retriggerRate = 0;
+    double timeframe = 15.1536;
+    double distance = 12000.23;
+
 
     
 
@@ -75,7 +84,9 @@ void variableDeclarations()
 
     ignoreUnused(letter, range, selection); //char
     ignoreUnused(counter, stepSize, largeNumber); //int
+    ignoreUnused(walkingSpeed, acceleration, weight); //float
     ignoreUnused(deviceState, interior, passby); //bool
+    ignoreUnused(retriggerRate, timeframe, distance); //double
 }
 /*
  10 functions
@@ -90,42 +101,88 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+bool enableLight (bool switchState, int switchSize = 150, bool peopleHome = false)
+{
+    ignoreUnused(switchState, switchSize, peopleHome);
+    return {};
+}
 
 /*
  2)
  */
+void drawGraphics(bool windowFocus, float windowSize = 15.24f, int windowHeight = 123)
+{
+    ignoreUnused(windowFocus, windowSize, windowHeight);
+}
 
 /*
  3)
  */
+float getFrequency (float amplitude, float time)
+{
+    ignoreUnused(amplitude, time);
+    return {};
+}
 
 /*
  4)
  */
+int setColor (int red, int blue, int green = 254)
+{
+    ignoreUnused(red, blue, green);
+    return {};
+}
 
 /*
  5)
  */
+double increaseTemperature (int amount, bool raining)
+{
+    ignoreUnused (amount, raining);
+    return {};
+}
 
 /*
  6)
  */
+void displayCredits (float versionNumber, char initials = 'a')
+{
+    ignoreUnused(versionNumber, initials);
+}
 
 /*
  7)
  */
+char createRandomLetter (int randomSeed, char startingLetter)
+{
+    ignoreUnused(randomSeed, startingLetter);
+    return {};
+}
 
 /*
  8)
  */
+double setBPM (int tempo, int divisions = 4)
+{
+    ignoreUnused(tempo, divisions);
+    return {};
+}
 
 /*
  9)
  */
+void calibrateSpeakers (double xPosition, double yPosition, int loudness = 60)
+{
+    ignoreUnused(xPosition, yPosition, loudness);
+}
 
 /*
  10)
  */
+ void insertEffect (bool slotFree, int slotNumber)
+ {
+    ignoreUnused(slotFree, slotNumber);
+ }
 
 int main()
 {
@@ -133,24 +190,34 @@ int main()
     rentACar(6, 2); 
     
     //1)
+    rentACar (250, 5);
     
-    //2)
+    //2) 
+    drawGraphics(true); 
     
     //3)
-    
+    getFrequency(0.5f, 125.5f);
+
     //4)
+    setColor (50, 40, 20);
     
     //5)
+    increaseTemperature(100, false);
     
     //6)
+    displayCredits(1.254f);
     
     //7)
+    createRandomLetter (125, 'f');
     
     //8)
+    setBPM (120);
     
     //9)
+    calibrateSpeakers(15.235, 5.524);
     
     //10)
+    insertEffect(true, 1);
     
     std::cout << "good to go!" << std::endl;
     return 0;    
