@@ -69,10 +69,10 @@ void variableDeclarations()
     float weight = 125.5f;
 
     bool deviceState = false; 
-    bool interior = 0; // true equals 1, false equals 0
+    bool interior = 0; FIXME never use 0 or 1 to indicate true or false
     bool passby = true; 
 
-    double retriggerRate = 0;
+    double retriggerRate = 0.0;
     double timeframe = 15.1536;
     double distance = 12000.23;
 
