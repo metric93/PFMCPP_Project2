@@ -18,7 +18,7 @@ video: Chapter 2 - Part 3
  char       -> single character  = 1 byte
  int        -> integer = 4 bytes
  float      -> floating point value = 4 bytes
- bool       -> true or false. (true/false can be either written out or the numbers 1 and 0) = 1 byte
+ bool       -> true or false = 1 byte (always write out true/false do not use 1 or 0)
  double     -> more accurate floating point value = 8 bytes
  void       -> no value 
  
@@ -69,7 +69,7 @@ void variableDeclarations()
     float weight = 125.5f;
 
     bool deviceState = false; 
-    bool interior = 0; FIXME never use 0 or 1 to indicate true or false
+    bool interior = false;
     bool passby = true; 
 
     double retriggerRate = 0.0;
