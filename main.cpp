@@ -187,37 +187,40 @@ void calibrateSpeakers (double xPosition, double yPosition, int loudness = 60)
 int main()
 {
     //example of calling that function
-    rentACar(6, 2); 
+    bool rentalTime = rentACar(6, 2); 
     
     //1)
-    rentACar (250, 5);
+    bool lightState = enableLight (1, 150, true);
     
     //2) 
     drawGraphics(true); 
     
     //3)
-    getFrequency(0.5f, 125.5f);
+    float frequency = getFrequency(0.5f, 125.5f);
 
     //4)
-    setColor (50, 40, 20);
+    int colorCode = setColor (50, 40, 20);
     
     //5)
-    increaseTemperature(100, false);
+    double heating = increaseTemperature(100, false);
     
     //6)
     displayCredits(1.254f);
     
     //7)
-    createRandomLetter (125, 'f');
+    auto randomLetter = createRandomLetter (125, 'f');
     
     //8)
-    setBPM (120);
+    auto BPM = setBPM (120);
     
     //9)
     calibrateSpeakers(15.235, 5.524);
     
     //10)
     insertEffect(true, 1);
+
+
+    ignoreUnused(rentalTime, lightState, frequency, colorCode, heating, randomLetter, BPM);
     
     std::cout << "good to go!" << std::endl;
     return 0;    
